@@ -1,0 +1,11 @@
+Install Node LTS version - https://nodejs.org/en/
+
+Install / Update Visual Studio Code to Latest Release - https://code.visualstudio.com/
+
+Extensions of VS Code
+AutoFileName
+vscode-icons
+JavaScript (ES6) code snippets]
+After all Extensions are installed
+
+File Menu -> Preferences -> File Icon Theme -> Select VScode Icons
