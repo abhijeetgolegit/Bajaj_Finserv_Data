@@ -1,0 +1,79 @@
+https://github.com/abhijeetgolegit/Bajaj_Finserv_Data.git
+
+Javascript -  client side scripting
+				+	server side scripting (node)
+				+ object oriented programming
+
+				Runtime / Platform		
+C#					CLR			
+Java				JVM
+C and C++		C Runtime
+Javascript		Node
+
+Javascript within the browser
+Java code within the browser - applet - plugin
+C# code within the browser - silverlight - plugin
+
+ECMAScript - Standards / Specifications on which 
+		javascript is being implemented
+
+ES3 - 1999
+ES5 - 2009 - Vanilla JS
+class - using function
+inheritance - prototype chaining
+					classical inheritance
+					pseudo classical inheritance
+ES6 / ES 2015 - more object oriented way of writing
+	class - class
+	Inheritance - extends
+
+Conceptually 3 things getting downloaded
+
+node.exe - runtime
+nodejs - FCL/ SDK, Set of classes and functions
+npm - Node package manager
+
+bower
+yarn
+
+npm  and yarn manages client side and server side packages
+bower manage only client side packages
+
+Typescript - 
+		ES 5 Features +
+		ES 2015 Features +
+		Strong Typing / Typesafe
+
+Typescript is a typed superset of Javascript that compiles
+	to a plain javascript.
+
+Transpilation - Transform + Compile
+
+tsc - typescript compiler
+
+React - ES2015 + JSX (Javascript Syntax Extension)
+ES2015+JSX - VanillaJS - Transpiler
+babel - transpiler
+
+
+npm ls -g - list globally installed
+npm ls - list local
+
+npm i -g <package-name> - globally install the module
+npm i <package-name> - locally install the module
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
