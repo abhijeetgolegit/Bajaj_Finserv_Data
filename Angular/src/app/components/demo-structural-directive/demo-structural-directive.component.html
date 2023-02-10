@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <h1>Fruits</h1>
+        <ul class="list-unstyled">
+            <li *ngFor="let fruit of fruits;
+                    index as i
+                    first as isFirst">
+                <span class="text-success" *ngIf="isFirst">First</span>
+                {{i}} {{fruit}}
+            </li>x
+        </ul>
+        <h1 *ngIf="true">Visible</h1>
+    </div>
+    <div>
+        <h1>Users</h1>
+        <ul class="list-unstyled">
+            <li *ngFor="let user of users;
+                    index as i
+                    first as isFirst
+                    last as isLast
+                    even as isEven">
+                <span class="text-success" 
+                *ngIf="isFirst">First </span>
+                <span class="text-danger" 
+                *ngIf="isLast">Last </span>
+                <span class="text-primary" 
+                *ngIf="isEven">Even </span>
+                {{i}} {{user.id}} {{user.name}} {{user.city}}
+            </li>
+        </ul>
+    </div>
+</div>

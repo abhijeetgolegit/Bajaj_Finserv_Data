@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
         text-align:center;
     }`]
 })
-export class HiComponent {
+export default class HiComponent {
     msg:string; // Model
     constructor() { 
         this.msg = 'Just to say Hi!';

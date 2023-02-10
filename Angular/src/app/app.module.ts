@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GreetComponent } from './components/greet/greet.component';
 import { HelloComponent } from './components/hello/hello.component';
-import { HiComponent } from './components/hi/hi.component';
+import HiComponent from './components/hi/hi.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { DemoStructuralDirectiveComponent } from './components/demo-structural-directive/demo-structural-directive.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MenuComponent } from './components/menu/menu.component';
     HelloComponent,
     HiComponent,
     GreetComponent,
-    MenuComponent
+    MenuComponent,
+    DemoStructuralDirectiveComponent
   ],
   imports: [
     BrowserModule
