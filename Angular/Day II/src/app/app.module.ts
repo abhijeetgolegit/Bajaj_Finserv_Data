@@ -8,6 +8,7 @@ import HiComponent from './components/hi/hi.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { DemoStructuralDirectiveComponent } from './components/demo-structural-directive/demo-structural-directive.component';
 import { SharedModule } from 'src/shared/shared.module';
+import { MoreAttrDirectivesComponent } from './components/more-attr-directives/more-attr-directives.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SharedModule } from 'src/shared/shared.module';
     HiComponent,
     GreetComponent,
     MenuComponent,
-    DemoStructuralDirectiveComponent
+    DemoStructuralDirectiveComponent,
+    MoreAttrDirectivesComponent
   ],
   imports: [
     BrowserModule,
