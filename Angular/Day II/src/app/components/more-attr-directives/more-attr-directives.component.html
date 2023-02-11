@@ -18,6 +18,13 @@
             Hello {{name}}!
         </h3>
         <hr/>
+        <h3 [ngStyle]="{'color':name?'indigo':'aqua'}">
+            Hello {{name}}!
+        </h3>
+        <hr/>
+        <h3 [ngStyle]="currentStyles">  
+            Hello {{name}}!</h3>
+        <hr/>
         <h3 *ngIf="name else elseBlock">
             Hello {{name}}!
         </h3>

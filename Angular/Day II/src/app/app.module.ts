@@ -9,6 +9,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { DemoStructuralDirectiveComponent } from './components/demo-structural-directive/demo-structural-directive.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { MoreAttrDirectivesComponent } from './components/more-attr-directives/more-attr-directives.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MoreAttrDirectivesComponent } from './components/more-attr-directives/m
     GreetComponent,
     MenuComponent,
     DemoStructuralDirectiveComponent,
-    MoreAttrDirectivesComponent
+    MoreAttrDirectivesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
