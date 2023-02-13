@@ -16,6 +16,7 @@ import { PersonListComponent } from './components/personslist/personslist.compon
 import { AddToCartComponent } from './components/addtocart/addtocart.component';
 import { CartDetailsComponent } from './components/cartdetails/cartdetails.component';
 import { CartService } from './services/cart.service';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CartService } from './services/cart.service';
     LoginComponent,
     PersonListComponent,
     AddToCartComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

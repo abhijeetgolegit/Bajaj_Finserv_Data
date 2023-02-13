@@ -18,8 +18,23 @@
     <!-- <app-login></app-login> -->
     <!-- <app-personlist></app-personlist> -->
     <!-- communication between any component to any component - observable -->
-    <app-products></app-products>
-    <app-cartdetails></app-cartdetails>
+    <!-- <app-products></app-products>
+    <app-cartdetails></app-cartdetails> -->
         <!-- -> <app-addtocart></app-addtocart> -->
     <!-- <app-cartdetails></app-cartdetails> -->
+
+    <!-- Parent to Child Communication using @Output() -->
+    <br/>
+    <!-- Simple button HTML element-->
+    <!-- <input type="button" class="btn btn-danger" value="Click Me!"
+    (click)="clickListener($event)"/>
+    <h1>{{buttonInfo}}</h1> -->
+
+    <hr/>
+    <h1>In Parent's Component</h1>
+    <h1>Name:- {{name}}!</h1>
+
+    <br/>
+    <app-profile [profileName]="name"
+    (update)="updateEventListener($event)"></app-profile>
 </div>
