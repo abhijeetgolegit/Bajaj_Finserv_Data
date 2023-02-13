@@ -1,0 +1,377 @@
+Google
+AngularJS - AngularJS 1.x - File based script src='files'
+
+From Angular 2.0 - module based
+
+Angular - Client Side Javascript opinionated Framework
+
+Angular MV*/ MVW Framework
+
+MVC - Controller is first class citizen - Client Server Arch
+	
+controller pushes the model's data to the view
+controller handling event associated with controls which are there on the view
+
+View is as dumb as possible
+
+MVP - Thick Client
+
+MVPM - Model View Presentation Model
+
+MVVM - Model View ViewsModel
+		Data Binding
+		Commands
+
+	WPF, Silverlight, PRISM
+
+
+Two way data binding
+jQuery, React.js - Javascript Libraries
+
+library - Your code makes use of functionalities given by library
+framework - framework makes use of your code
+
+Why Angular?
+client server 
+all the time full page request
+whole html chunk getting downloaded from server to client
+and that too for millions and billions of clients
+
+at the max better solution
+make asynchronous calls / partial page request
+
+
+code is not really modular / reusable
+object oriented programming
+
+
+two main reasons
+whole html chunk getting downloaded from server to client
+mostly thinking is at page level and hence end up with redundant code
+
+
+you get only necessary data from the server with asynchronous calls
+and do the rendering of html at client side - jQuery template
+
+write code using object oriented way - ES2015+ way onwards
+
+If someone else will take care of above 2 things for you
+you can concentrate only on business logic
+
+- so that someone else is nothing but
+client side javascript framework
+e.g. Angular, Ember
+
+SPA - Single Page Application
+
+
+
+Module Formats
+
+Asynchronous Module Definition (AMD) - client server
+define - export
+import - You need to have one module loader called RequireJS
+
+CommonJS - Server side - node
+export - module.exports
+import - CommonJS function called as require()
+
+Universal Module Definition(UMD) - Both AMD and CommonJS
+
+System.register - by one module loader called as SystemJS
+you being programmer you need to tell SystemJS where to look for the file
+
+ES2015 module format
+	module bundler - browserify - CommonJS
+							webpack - AMD, CommonJS, ES2015 modules
+
+Webpack treats everything as a module.
+css,html,js,fonts, images - module
+respective loaders
+	htmlloader - .html
+	cssloader, styleloader - .css
+
+
+globally install angular cli
+
+npm i -g @angular/cli
+
+list globally installed packages
+npm ls - g
+
+go to specific folder
+
+ng new shopping_cart_app
+
+
+
+
+
+GreetComponent
+
+greetMsg:string;
+
+render greetMsg in view
+
+AWD - Adaptive Web Design - Layout decision is at server side
+
+RWD - Responsive Web Design - Layout decision is at client side
+
+
+Bootstrap - you can easily achieve Responsiveness to your webpage
+
+CSS3 - media query
+
+Module
+Component
+Service
+Directive
+Pipe
+
+	[ ] = Property Binding
+	* = Structural Directive
+	() = Event Binding
+	[()] = Two way Data Binding
+	# = template reference variable
+
+
+User.ts
+class User
+	Id:number
+	name:string
+	city:string
+
+component
+	users:User[]
+
+render that collection with User name and city
+	First
+	Last
+	Even
+	Odd
+and even display index
+
+
+
+Google
+AngularJS - AngularJS 1.x - File based script src='files'
+
+From Angular 2.0 - module based
+
+Angular - Client Side Javascript opinionated Framework
+
+Angular MV*/ MVW Framework
+
+MVC - Controller is first class citizen - Client Server Arch
+	
+controller pushes the model's data to the view
+controller handling event associated with controls which are there on the view
+
+View is as dumb as possible
+
+MVP - Thick Client
+
+MVPM - Model View Presentation Model
+
+MVVM - Model View ViewsModel
+		Data Binding
+		Commands
+
+	WPF, Silverlight, PRISM
+
+
+Two way data binding
+jQuery, React.js - Javascript Libraries
+
+library - Your code makes use of functionalities given by library
+framework - framework makes use of your code
+
+Why Angular?
+client server 
+all the time full page request
+whole html chunk getting downloaded from server to client
+and that too for millions and billions of clients
+
+at the max better solution
+make asynchronous calls / partial page request
+
+
+code is not really modular / reusable
+object oriented programming
+
+
+two main reasons
+whole html chunk getting downloaded from server to client
+mostly thinking is at page level and hence end up with redundant code
+
+
+you get only necessary data from the server with asynchronous calls
+and do the rendering of html at client side - jQuery template
+
+write code using object oriented way - ES2015+ way onwards
+
+If someone else will take care of above 2 things for you
+you can concentrate only on business logic
+
+- so that someone else is nothing but
+client side javascript framework
+e.g. Angular, Ember
+
+SPA - Single Page Application
+
+
+
+Module Formats
+
+Asynchronous Module Definition (AMD) - client server
+define - export
+import - You need to have one module loader called RequireJS
+
+CommonJS - Server side - node
+export - module.exports
+import - CommonJS function called as require()
+
+Universal Module Definition(UMD) - Both AMD and CommonJS
+
+System.register - by one module loader called as SystemJS
+you being programmer you need to tell SystemJS where to look for the file
+
+ES2015 module format
+	module bundler - browserify - CommonJS
+							webpack - AMD, CommonJS, ES2015 modules
+
+Webpack treats everything as a module.
+css,html,js,fonts, images - module
+respective loaders
+	htmlloader - .html
+	cssloader, styleloader - .css
+
+
+globally install angular cli
+
+npm i -g @angular/cli
+
+list globally installed packages
+npm ls - g
+
+go to specific folder
+
+ng new shopping_cart_app
+
+
+
+
+
+GreetComponent
+
+greetMsg:string;
+
+render greetMsg in view
+
+AWD - Adaptive Web Design - Layout decision is at server side
+
+RWD - Responsive Web Design - Layout decision is at client side
+
+
+Bootstrap - you can easily achieve Responsiveness to your webpage
+
+CSS3 - media query
+
+Module
+Component
+Service
+Directive
+Pipe
+
+	[] = Property Binding
+	* = Structural Directive - *ngfor, *ngIf, *ngSwitch
+	() = Event Binding
+	[()] = Two way Data Binding
+	# = template reference variable
+
+
+User.ts
+class User
+	Id:number
+	name:string
+	city:string
+
+component
+	users:User[]
+
+render that collection with User name and city
+	First
+	Last
+	Even
+	Odd
+and even display index
+
+
+*ngSwitch
+
+
+Directives - Built-In
+
+Components - directives used with templates. This type of directive
+is most common directive type.
+
+Structural Directives - *ngIf, *ngSwitch,m *ngFor
+
+Attribute Directives - Change the appearance or behaviour of an element, component, another directive
+
+NgClass - Adds and removes a set of CSS classes
+NgStyle - Adds and removes a set of HTML Styles
+NgModel - Add two-way data binding to an HTML Form elements
+
+class Product
+		id:number
+		name:string
+		imgPath:string
+		price:number
+		category:string
+
+
+
+
+
+
+
+
+
+Assignment
+Car
+	name
+	make	
+	hp
+	carImage
+
+CarsComponent
+CarsService
+
+Day III
+
+[] property binding
+() event binding
+* structural directives
+# template reference variable
+[()] - TWo way databinding / ngModel
+[(ngModel)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
