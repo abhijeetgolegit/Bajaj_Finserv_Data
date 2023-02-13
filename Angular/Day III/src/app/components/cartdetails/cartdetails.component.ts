@@ -21,8 +21,8 @@ import { CartService } from 'src/app/services/cart.service';
             <td><img [src]="product.imgPath" alt='{{product.imgPath}}' /></td>
             <td>{{product.category}}</td>            
         </tr>
-    </table>
-    <button (click)="getCartData()">Get</button>`,
+    </table>`,
+    // <button (click)="getCartData()">Get</button>`,
     styles: [`
             h1 {
                 text-align: center;
@@ -45,10 +45,14 @@ import { CartService } from 'src/app/services/cart.service';
 
 export class CartDetailsComponent {
     cartProducts: Product[] = [];
-    constructor(private cartService:CartService) { }
-    getCartData() {
-         this.cartProducts = this.cartService.getCartItems();         
-        console.log('Cart Details getCartData! '+this.cartProducts[0].name);
-
+    constructor(private cartService:CartService) { 
+        // Subscribing  to the observable which is in the cartservice
+        this.cartService.cartBroadcaster.subscribe(res =>{
+            this.cartProducts = JSON.parse(res);
+        })
     }
+    // getCartData() {
+    //      this.cartProducts = this.cartService.getCartItems();         
+    //     console.log('Cart Details getCartData! '+this.cartProducts[0].name);
+    // }
 }
