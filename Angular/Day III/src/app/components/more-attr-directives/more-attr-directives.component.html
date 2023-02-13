@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="text-primary text-center">Attribute Directives!</h1>
+    <div [hidden]="!flag">
+        <h1 class="text-secondary text-center">Simple H1</h1>
+        <!-- <h3 class="blue bg-green">Hello There!</h3>
+        <h3 [ngClass]="'blue bg-green'">Hello There!</h3>
+        <h3 [ngClass]="['blue', 'bg-green']">Hello There!</h3> -->
+        <h3 [ngClass]="{'blue':true,'bg-green':true}">Hello There!</h3>
+        <h3 [ngClass]="{'blue':false,'red':true,'bg-green':true}">Hello There!</h3>
+        <h3 [ngClass]="{'blue':false,'red bg-green':true}">Hello There!</h3>
+        <hr/>
+        <h3 [ngClass]="flag == false ?'red':'blue'">Hello There!</h3>
+        <hr/>
+        <h3 [ngStyle]="{'background-color':'aqua'}">This is simple ngStyle Example!</h3>
+        <h3 [ngStyle]="myStyles">This is simple ngStyle Example!</h3>
+        <hr/>
+        <h3 [ngStyle]="{'display':name?'block':'none'}">
+            Hello {{name}}!
+        </h3>
+        <hr/>
+        <h3 [ngStyle]="{'color':name?'indigo':'aqua'}">
+            Hello {{name}}!
+        </h3>
+        <hr/>
+        <h3 [ngStyle]="currentStyles">  
+            Hello {{name}}!</h3>
+        <hr/>
+        <h3 *ngIf="name else elseBlock">
+            Hello {{name}}!
+        </h3>
+        <ng-template #elseBlock>
+            <h3>No Name was specified!</h3>
+        </ng-template>
+    </div>
+</div>
