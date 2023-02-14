@@ -52,7 +52,7 @@ export class HighlightDirective {
   }
   @HostListener('mouseenter')
   onMouseEnter(){
-    this.renderer.setStyle(this.elementRef.nativeElement,"background-color",this.highlightColor);
+    this.renderer.setStyle(this.elementRef.nativeElement,"background-color",this.highlightColor||'yellow');
     this.renderer.setStyle(this.elementRef.nativeElement,"width",'max-content');
     this.renderer.setStyle(this.elementRef.nativeElement,"padding",'30px');
     this.renderer.setStyle(this.elementRef.nativeElement,"margin-left",'45%');

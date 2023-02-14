@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit {
             this.userName = res;
         })
 
-        //this.userName = this.loginService.getUserName();
+        this.userName = this.loginService.getUserName();
     }
 
     ngOnInit() { }

@@ -35,7 +35,8 @@ export class LoginComponent {
     name: string;
     password: string;
 
-    constructor(private loginService:LoginService,private router:Router) {
+    constructor(private loginService:LoginService,
+        private router:Router) {
         this.name = 'Admin';
         this.password = 'admin';
     }
@@ -43,6 +44,9 @@ export class LoginComponent {
     login() {
         console.log('User ' + this.name + ' logged in!');
         this.loginService.addUserName(this.name);
+
+        // Navigate to the Products Component
+        this.router.navigate(['/products']);
     }
 
     // updateName(nm:string){

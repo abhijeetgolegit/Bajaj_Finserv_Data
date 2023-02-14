@@ -12,10 +12,11 @@ import { Component, OnInit } from '@angular/core';
     <hr/>
     <!-- <h3>Hello Angular!</h3>
     <h3 appHighlight>Hello Angular</h3> -->
-    <!-- <hr/>
+    <hr/>
     <h3>Hello Angular!</h3>
+    <h3 appHighlight>Hello Angular!</h3>
     <h3 [appHighlight]="'palegreen'">Hello Angular</h3>
-    <h3 [appHighlight]="'orange'">Hello Angular</h3> -->
+    <h3 [appHighlight]="'orange'">Hello Angular</h3>
 
     <!-- <ng-template appIsAuthorized>
             <div>
@@ -23,9 +24,9 @@ import { Component, OnInit } from '@angular/core';
             </div>
     </ng-template> -->
 
-            <div *appIsAuthorized>
+            <!-- <div *appIsAuthorized>
                 <h1>This area is to be displayed, if the user is Authorized!</h1>
-            </div>
+            </div> -->
 
     `
 })

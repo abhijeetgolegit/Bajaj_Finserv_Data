@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { GreetComponent } from './components/greet/greet.component';
@@ -22,6 +23,8 @@ import { AddcontentDirective } from './directives/addcontent.directive';
 import { DemoDirectiveComponent } from './components/demo_custom_directives/demodirective.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { IsAuthorizedDirective } from './directives/is-authorized.directive';
+import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { ProductDetailsComponent } from './components/productdetails/productdetails.component';
 
 
 @NgModule({
@@ -43,12 +46,15 @@ import { IsAuthorizedDirective } from './directives/is-authorized.directive';
     AddcontentDirective,
     DemoDirectiveComponent,
     HighlightDirective,
-    IsAuthorizedDirective
+    IsAuthorizedDirective,
+    PageNotFoundComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   //providers: [CartService],
   bootstrap: [AppComponent]

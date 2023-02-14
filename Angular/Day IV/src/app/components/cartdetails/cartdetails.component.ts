@@ -50,6 +50,8 @@ export class CartDetailsComponent {
         this.cartService.cartBroadcaster.subscribe(res =>{
             this.cartProducts = JSON.parse(res);
         })
+
+        this.cartProducts = this.cartService.getCartItems();
     }
     // getCartData() {
     //      this.cartProducts = this.cartService.getCartItems();         

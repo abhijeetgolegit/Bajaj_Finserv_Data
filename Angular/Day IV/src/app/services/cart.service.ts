@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import Product from '../product';
 import {Subject} from 'rxjs';
+import { SessionStorage } from 'angular-web-storage';
 
 @Injectable({providedIn: 'root'})
 export class CartService {
     cart:Product[]=[];//Javascript Object
+    @SessionStorage()
     myCart:string='';// JSON String
 
     //Subject

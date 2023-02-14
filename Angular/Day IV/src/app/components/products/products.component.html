@@ -1,13 +1,15 @@
 <div class="container">
+
+    <app-welcome style="float:right"></app-welcome>
     <!--     Enter Search: <input type="text" (blur)="doSearch($event)"><br/> -->
 
     <!-- Template reference variable -->
     Enter Search: <input type="text" #search (blur)="doSearch(search.value)"><br />
 
-    <div style="width: 890px;float: left;">
+    <div style="width: 750px;margin-left: 10px;">
         <table border="3px solid black" align="center" class="table">
             <tr>
-                <th>Id</th>
+                <!-- <th>Id</th>                                                                                                                                                                                     -->
                 <th>Name</th>
                 <th>Price</th>
                 <th>Product Image</th>
@@ -15,8 +17,9 @@
                 <th colspan="3">Actions</th>
             </tr>
             <tr *ngFor="let product of products, let i=index">
-                <td>{{product.id}}</td>
-                <td>{{product.name}}</td>
+                <!-- <td>{{product.id}}</td>
+                <td>{{product.name}}</td> -->
+                <td><a [routerLink]="[product.id]">{{product.name}}</a></td>
                 <td>Rs {{product.price}} /-</td>
                 <!-- <td><img src="{{product.imgPath}}" alt='product' /></td> -->
                 <!-- <td><img bind-src="product.imgPath" alt='product' /></td> -->
@@ -30,5 +33,8 @@
                 <td><app-addtocart [selectedProduct]="product"></app-addtocart></td>
             </tr>
         </table>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
     </div>
 </div>

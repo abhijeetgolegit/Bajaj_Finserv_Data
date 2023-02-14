@@ -8,6 +8,7 @@ import { MenuService } from 'src/app/services/menu.service';
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
+                    <img src="./assets/images/BajajFinserv.png" class="headerlogo" />
                     Bajaj Finserv!
                 </a>
             </div>
@@ -18,7 +19,8 @@ import { MenuService } from 'src/app/services/menu.service';
 
             <ul id="navbarNav" class="nav navbar-nav collapse navbar-collapse">
                 <li class="nav-item" *ngFor="let item of menuItems">
-                    <a class="nav-link" href="#">{{item}}</a>
+                    <!-- <a class="nav-link" href="{{item|lowercase}}">{{item}}</a>  -->
+                   <a class="nav-link" routerLink="{{item|lowercase}}">{{item}}</a>
                 </li>
             </ul>
         </nav>
