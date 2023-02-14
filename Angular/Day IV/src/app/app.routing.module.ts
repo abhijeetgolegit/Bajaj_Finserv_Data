@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CartDetailsComponent } from './components/cartdetails/cartdetails.component';
 import { DemoDirectiveComponent } from './components/demo_custom_directives/demodirective.component';
 import { GreetComponent } from './components/greet/greet.component';
@@ -41,6 +41,11 @@ const routes:Routes = [
         component:DemoDirectiveComponent    
     },
     {
+        path:'lazy',
+        loadChildren: () => import('../lazy/lazy.module')
+                                .then(m => m.LazyModule)  
+    },
+    {
         path:'profile',
         component:ProfileComponent   
     },
@@ -51,7 +56,9 @@ const routes:Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    // imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes,{preloadingStrategy:NoPreloading})],
+    //imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

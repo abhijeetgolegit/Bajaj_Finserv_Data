@@ -23,6 +23,16 @@ import { MenuService } from 'src/app/services/menu.service';
                    <a class="nav-link" routerLink="{{item|lowercase}}">{{item}}</a>
                 </li>
             </ul>
+
+             <!-- For lazy module -->
+        <ul class="nav navbar-nav collapse navbar-collapse" id="navbarNav">
+            <li class="nav-item">                
+                <a class="nav-link" routerLink="/lazy">Lazy One</a>
+            </li>
+            <li class="nav-item">                
+                <a class="nav-link" routerLink="/lazy/two">Lazy Two</a>
+            </li>
+        </ul>
         </nav>
     </div>`,
     providers:[MenuService]
