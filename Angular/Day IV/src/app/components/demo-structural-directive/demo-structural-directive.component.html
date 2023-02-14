@@ -1,0 +1,55 @@
+<div class="container">
+    <div>
+        <h1>Fruits</h1>
+        <ul class="list-unstyled">
+            <li *ngFor="let fruit of fruits;
+                    index as i
+                    first as isFirst">
+                <span class="text-success" *ngIf="isFirst">First</span>
+                {{i}} {{fruit}}
+            </li>
+        </ul>
+        <h1 *ngIf="true">Visible</h1>
+    </div>
+    <div>
+        <h1>Users</h1>
+        <ul class="list-unstyled">
+            <li *ngFor="let user of users;
+                    index as i
+                    first as isFirst
+                    last as isLast
+                    even as isEven">
+                <span class="text-success" *ngIf="isFirst">First </span>
+                <span class="text-danger" *ngIf="isLast">Last </span>
+                <span class="text-primary" *ngIf="isEven">Even </span>
+                {{i}} {{user.id}} {{user.name}} {{user.city}}
+            </li>
+        </ul>
+    </div>
+    <div [ngSwitch]="dayOfTheWeek">
+        <div *ngSwitchCase=0>
+            <h3>Today is Sunday! You deserve a break!</h3>
+        </div>
+        <div *ngSwitchCase=1>
+            <h3>Today is Monday, Hope you have productive Week</h3>
+        </div>
+        <div *ngSwitchCase=2>
+            <h3>Today is Tuesday, Smash your Goals</h3>
+        </div>
+        <div *ngSwitchCase=3>
+            <h3>Today is Wednesday, You're already half way through</h3>
+        </div>
+        <div *ngSwitchCase=4>
+            <h3>Today is Thursday, It's like Friday Lite</h3>
+        </div>
+        <div *ngSwitchCase=5>
+            <h3>Today is Friday, TGIF!!!</h3>
+        </div>
+        <div *ngSwitchCase=6>
+            <h3>Today is Saturday! Let's Party!</h3>
+        </div>
+        <div *ngSwitchDefault>
+            <h3>Uh oh! Something wrong!</h3>
+        </div>
+    </div>
+</div>
