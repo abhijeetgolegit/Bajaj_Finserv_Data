@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -36,7 +37,8 @@ export class LoginComponent {
     password: string;
 
     constructor(private loginService:LoginService,
-        private router:Router) {
+        private router:Router,
+        private authService:AuthService) {
         this.name = 'Admin';
         this.password = 'admin';
     }
@@ -44,6 +46,13 @@ export class LoginComponent {
     login() {
         console.log('User ' + this.name + ' logged in!');
         this.loginService.addUserName(this.name);
+
+        // Authentication logic
+        this.authService.value = true;
+
+        // Authorization logic
+        if(this.name.toLowerCase() === 'admin')
+            this.authService.isAdmin = true;
 
         // Navigate to the Products Component
         this.router.navigate(['/products']);

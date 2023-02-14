@@ -8,6 +8,8 @@ import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.co
 import { ProductDetailsComponent } from './components/productdetails/productdetails.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdminGuard } from './guards/admin.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes:Routes = [
     {
@@ -27,6 +29,8 @@ const routes:Routes = [
     {
         path:'products',
         component:ProductsComponent,
+        canActivate:[AuthGuard],
+        canActivateChild:[AdminGuard],
         children:[{
             path:':id',
             component:ProductDetailsComponent
@@ -38,7 +42,8 @@ const routes:Routes = [
     },
     {
         path:'directives',
-        component:DemoDirectiveComponent    
+        component:DemoDirectiveComponent,
+        canActivate:[AuthGuard]
     },
     {
         path:'lazy',
@@ -57,8 +62,10 @@ const routes:Routes = [
 
 @NgModule({
     // imports: [RouterModule.forRoot(routes)],
+    //Default is NoPreloading
     imports: [RouterModule.forRoot(routes,{preloadingStrategy:NoPreloading})],
     //imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
+    // You can even set custom preloadingStrategy
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
