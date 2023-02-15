@@ -4,6 +4,7 @@ import { CartDetailsComponent } from './components/cartdetails/cartdetails.compo
 import { DemoPipesComponent } from './components/demo-pipes/demo-pipes.component';
 import { DemoDirectiveComponent } from './components/demo_custom_directives/demodirective.component';
 import { GreetComponent } from './components/greet/greet.component';
+import { HookComponent } from './components/lifecycle-hooks/hook.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ProductDetailsComponent } from './components/productdetails/productdetails.component';
@@ -58,6 +59,10 @@ const routes:Routes = [
     {
         path:'pipes',
         component:DemoPipesComponent   
+    },
+    {
+        path:'lifecyclehooks',
+        component:HookComponent   
     },
     {
         path:'**',

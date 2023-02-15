@@ -28,6 +28,8 @@ import { ProductDetailsComponent } from './components/productdetails/productdeta
 import { DemoPipesComponent } from './components/demo-pipes/demo-pipes.component';
 import { CaptionPipe } from './pipes/caption.pipe';
 import { MyfilterPipe } from './pipes/myfilter.pipe';
+import { HookComponent } from './components/lifecycle-hooks/hook.component';
+import { HookChildComponent } from './components/lifecycle-hooks/hook-child.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { MyfilterPipe } from './pipes/myfilter.pipe';
     ProductDetailsComponent,
     DemoPipesComponent,
     CaptionPipe,
-    MyfilterPipe
+    MyfilterPipe,
+    HookComponent,
+    HookChildComponent
   ],
   imports: [
     BrowserModule,
