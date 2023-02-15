@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.co
 import { ProductDetailsComponent } from './components/productdetails/productdetails.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { UsersComponent } from './components/users/users.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -63,6 +64,10 @@ const routes:Routes = [
     {
         path:'lifecyclehooks',
         component:HookComponent   
+    },
+    {
+        path:'users',
+        component:UsersComponent   
     },
     {
         path:'**',

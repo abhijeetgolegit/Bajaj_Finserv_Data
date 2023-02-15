@@ -7,6 +7,6 @@ export class MenuService {
   menuItems:string[];
     constructor() {
       // Here it should be RESTFulservice call
-       this. menuItems = ['Login','Greet','Products','CartDetails','Directives','Profile','Pipes','LifecycleHooks'];
+       this. menuItems = ['Login','Greet','Products','CartDetails','Directives','Profile','Pipes','LifecycleHooks','Users'];
      }
 }

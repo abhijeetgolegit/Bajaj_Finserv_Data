@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routing.module';
+import {HttpClientModule} from'@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { GreetComponent } from './components/greet/greet.component';
@@ -30,6 +31,7 @@ import { CaptionPipe } from './pipes/caption.pipe';
 import { MyfilterPipe } from './pipes/myfilter.pipe';
 import { HookComponent } from './components/lifecycle-hooks/hook.component';
 import { HookChildComponent } from './components/lifecycle-hooks/hook-child.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 @NgModule({
@@ -58,13 +60,15 @@ import { HookChildComponent } from './components/lifecycle-hooks/hook-child.comp
     CaptionPipe,
     MyfilterPipe,
     HookComponent,
-    HookChildComponent
+    HookChildComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   //providers: [CartService],
   bootstrap: [AppComponent]

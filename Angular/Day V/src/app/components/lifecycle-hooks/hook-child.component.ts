@@ -9,10 +9,11 @@ import { MyProduct } from './myproduct.model';
     <ng-content></ng-content>
     `
 })
-
 export class HookChildComponent implements OnInit, OnChanges,
- DoCheck, AfterContentInit ,AfterContentChecked,AfterViewInit, 
- AfterViewChecked,OnDestroy{
+ DoCheck{
+// export class HookChildComponent implements OnInit, OnChanges,
+//  DoCheck, AfterContentInit ,AfterContentChecked,AfterViewInit, 
+//  AfterViewChecked,OnDestroy{
 
     // For ngOnDestroy
     count:number = 0;
@@ -36,10 +37,10 @@ export class HookChildComponent implements OnInit, OnChanges,
         console.log('Constructor is called!...');
         this.product = new MyProduct();
 
-        this.intervalId = setInterval(() =>{
-            this.count++;
-            console.log('Time running!... ',this.count);
-        },1000);
+        // this.intervalId = setInterval(() =>{
+        //     this.count++;
+        //     console.log('Time running!... ',this.count);
+        // },1000);
     }
 
     ngOnInit() {
@@ -52,25 +53,25 @@ export class HookChildComponent implements OnInit, OnChanges,
         console.log('ngDoCheck is called!... ', this.product);
     }
 
-    ngAfterContentInit(): void {
-        console.log('ngAfterContentInit is called!... ');
-        this.contentChild.nativeElement.setAttribute("style", `color:${this.parentData}`);
-    }
-    ngAfterContentChecked(): void {
-        console.log('ngAfterContentChecked is called!... ');
-        this.contentChild.nativeElement.setAttribute("style", `color:${this.parentData}`);
-    }
+    // ngAfterContentInit(): void {
+    //     console.log('ngAfterContentInit is called!... ');
+    //     this.contentChild.nativeElement.setAttribute("style", `color:${this.parentData}`);
+    // }
+    // ngAfterContentChecked(): void {
+    //     console.log('ngAfterContentChecked is called!... ');
+    //     this.contentChild.nativeElement.setAttribute("style", `color:${this.parentData}`);
+    // }
     
-    ngAfterViewInit(): void {
-        console.log('ngAfterViewInit is called!... ');
-        this.viewChild.nativeElement.setAttribute("style", `background-color:${this.parentData}`);
-    }
-    ngAfterViewChecked(): void {
-        console.log('ngAfterViewChecked is called!... ');
-        this.viewChild.nativeElement.setAttribute("style", `background-color:${this.parentData}`);
-    }
-    ngOnDestroy(): void {
-        console.log('ngOnDestroy is called!...');
-        clearInterval(this.intervalId);
-    }
+    // ngAfterViewInit(): void {
+    //     console.log('ngAfterViewInit is called!... ');
+    //     this.viewChild.nativeElement.setAttribute("style", `background-color:${this.parentData}`);
+    // }
+    // ngAfterViewChecked(): void {
+    //     console.log('ngAfterViewChecked is called!... ');
+    //     this.viewChild.nativeElement.setAttribute("style", `background-color:${this.parentData}`);
+    // }
+    // ngOnDestroy(): void {
+    //     console.log('ngOnDestroy is called!...');
+    //     clearInterval(this.intervalId);
+    // }
 }
