@@ -62,6 +62,8 @@ import { Component, OnInit } from '@angular/core';
                     {{person}}
             </li>
         </ul>
+        <h1>Hello World!</h1>
+        <app-hello>Child Content</app-hello>
     </div>
     `
 })
