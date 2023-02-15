@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routing.module';
 import {HttpClientModule} from'@angular/common/http';
 
@@ -32,6 +32,9 @@ import { MyfilterPipe } from './pipes/myfilter.pipe';
 import { HookComponent } from './components/lifecycle-hooks/hook.component';
 import { HookChildComponent } from './components/lifecycle-hooks/hook-child.component';
 import { UsersComponent } from './components/users/users.component';
+import { TemplateDrivenFormComponent } from './components/demo_template_driven/demo-template-driven.component';
+import { ReactiveFormComponent } from './components/demo-reactive-form/demo-reactive-form.component';
+import { ValidationFormComponent } from './components/demo-reactive-form-validations/demo-reactive-form-validations.component';
 
 
 @NgModule({
@@ -61,14 +64,18 @@ import { UsersComponent } from './components/users/users.component';
     MyfilterPipe,
     HookComponent,
     HookChildComponent,
-    UsersComponent
+    UsersComponent,
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent,
+    ValidationFormComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   //providers: [CartService],
   bootstrap: [AppComponent]

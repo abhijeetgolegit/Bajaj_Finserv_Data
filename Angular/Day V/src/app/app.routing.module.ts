@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CartDetailsComponent } from './components/cartdetails/cartdetails.component';
 import { DemoPipesComponent } from './components/demo-pipes/demo-pipes.component';
+import { ValidationFormComponent } from './components/demo-reactive-form-validations/demo-reactive-form-validations.component';
+import { ReactiveFormComponent } from './components/demo-reactive-form/demo-reactive-form.component';
 import { DemoDirectiveComponent } from './components/demo_custom_directives/demodirective.component';
+import { TemplateDrivenFormComponent } from './components/demo_template_driven/demo-template-driven.component';
 import { GreetComponent } from './components/greet/greet.component';
 import { HookComponent } from './components/lifecycle-hooks/hook.component';
 import { LoginComponent } from './components/login/login.component';
@@ -68,7 +71,20 @@ const routes:Routes = [
     {
         path:'users',
         component:UsersComponent   
+    },  
+    {
+        path:'templatedriven',
+        component:TemplateDrivenFormComponent   
     },
+    {
+        path:'reactiveforms',
+        component:ReactiveFormComponent   
+    },
+    {
+        path:'validations',
+        component:ValidationFormComponent
+    },
+    
     {
         path:'**',
         component:PageNotFoundComponent   
